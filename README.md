@@ -2,4 +2,4 @@ The soccer team needs to have at least 1 Goalkeeper (GK), 1 Striker (ST), 1 Midf
 
 Please use "npm install" to install all the dependencies and then use "npm start" to run the app.
 
-Alternatively, using docker can run the file. After intalling docker, run "docker build -t marvel-soccer-team" and then run "docker run -p 8080:80 marvel-soccer-team". The app can be visited at http://localhost:8080
+Alternatively, using docker can run the file. After installing docker, run "docker build -t marvel-soccer-team" and then run "docker run -p 8080:80 marvel-soccer-team". The app can be visited at http://localhost:8080
