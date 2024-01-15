@@ -1,5 +1,5 @@
 # Step 1: Use an official Node runtime as a parent image
-FROM node:20.11
+FROM --platform=linux/amd64 node:20.11
 
 # Step 2: Set the working directory
 WORKDIR /app
