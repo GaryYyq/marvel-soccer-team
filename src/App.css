@@ -48,3 +48,42 @@ a {
     justify-content: center;
     align-items: center;
 }
+
+/* Default styles for desktop */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+    }
+}
+
+/* Responsive styles for mobile phones */
+@media (max-width: 480px) {
+    .cards-container {
+        flex-direction: column;
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+.card {
+    width: 100%; /* for mobile */
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 48%; /* for tablets and above */
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: 23%; /* for desktop */
+    }
+}
