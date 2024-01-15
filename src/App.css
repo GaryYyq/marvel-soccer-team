@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cards-container > * {
+    margin: 0 30px 80px; /* Adjust spacing as needed */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+select {
+    width: auto; /* Adjust as per your requirement */
+    padding: 5px 10px;
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #333;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Specific styles for each social media */
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.share-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
