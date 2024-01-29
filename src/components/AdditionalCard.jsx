@@ -5,7 +5,7 @@ import SelectionCard from './SelectionCard';
 function AdditionalCard({ onSelectCharacter, selectedCharacters }) {
     const [type, setType] = useState("");
     const [name, setName] = useState(""); // Local state for selected name
-    const [selectedName, setSelectedName] = useState("");
+    // const [selectedName, setSelectedName] = useState("");
 
     const { data, isLoading, error } = useMarvelData();
 
@@ -19,15 +19,15 @@ function AdditionalCard({ onSelectCharacter, selectedCharacters }) {
         onSelectCharacter(selectedName, { type }); // Call the parent component's function
     };
 
-    function handleSelectName(event) {
-        const name = event.target.value;
-        setSelectedName(name);
-    };
+    // function handleSelectName(event) {
+    //     const name = event.target.value;
+    //     setSelectedName(name);
+    // };
 
     if (isLoading) return <div>Loading...</div>;
     if (error) return <div>Error: {error.message}</div>;
     return (
-        <div>
+        <div className='card'>
             <select value={type} onChange={handleTypeChange}>
                 <option value="">Select Type</option>
                 <option value="Additional player">GK</option>

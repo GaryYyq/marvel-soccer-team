@@ -15,19 +15,24 @@ function App() {
   });
 
   const handleSelectCharacter = (characterName, role) => {
-    console.log(characterName);
+    // console.log(characterName);
     if (typeof role === 'object') {
       role = role.type;
     }
 
-    console.log(role);
+    // console.log(role);
     setSelectedCharacters((prevCharacters) => {
+      // console.log(Object.keys(prevCharacters));
       // Remove the character from all roles
       const newCharacters = Object.keys(prevCharacters).reduce((acc, key) => {
+        console.log(acc);
         if (prevCharacters[key] === characterName) {
+          // console.log(`key is ${key}`);
           acc[key] = null;
         } else {
           acc[key] = prevCharacters[key];
+          // console.log(`key is ${key}`);
+
         }
         return acc;
       }, {});
@@ -51,7 +56,7 @@ function App() {
       </div>
       <div className="share-links">
         <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.marvelsoccerteam.com" target="_blank" class="facebook">Share on Facebook</a>
-        <a href="https://twitter.com/intent/tweet?text=Your%20Share%20Text&url=https%3A%2F%2Fwww.marvelsoccerteam.com" target="_blank" class="twitter">Share on Twitter</a>
+        <a href="https://twitter.com/intent/tweet?text=Your%20Share%20Text&url=https%3A%2F%2Fwww.marvelsoccerteam.com" target="_blank" class="X">Share on X</a>
         <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.example.com" target="_blank" class="linkedin">Share on LinkedIn</a>
 
       </div>

@@ -9,13 +9,15 @@ function SelectionCard({ type, onNameSelect, selectedCharacters }) {
     function handleSelectName(event) {
         const name = event.target.value;
         const isSelectionSuccessful = onNameSelect(name, type);
-        if (isSelectionSuccessful) {
-            // If the selection is successful, update the local state
-            setSelectedName(name);
-        } else {
-            // If the selection is not successful, reset the local state
-            setSelectedName("");
-        }
+        // console.log(typeof isSelectionSuccessful + " is the type");     
+        // if (isSelectionSuccessful) {
+        //     // If the selection is successful, update the local state
+        //     setSelectedName(name);
+        // } else {
+        //     // If the selection is not successful, reset the local state
+        //     setSelectedName(name);
+        // }
+        setSelectedName(name);
     };
 
     if (isLoading) return <div>Loading...</div>;
@@ -23,7 +25,7 @@ function SelectionCard({ type, onNameSelect, selectedCharacters }) {
 
     return (
 
-        <div>
+        <div className='card'>
             <h3>Select {type}: {selectedName}</h3>
             <select onChange={handleSelectName} value={selectedCharacters[type] || ''}>
                 <option value="">Select a character</option>
